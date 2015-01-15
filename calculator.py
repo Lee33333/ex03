@@ -20,8 +20,10 @@ def main():
             return
     #    otherwise decide which math function to call based on the tokens we read
         elif tokens[0] in ["+" , "-" , "*" , "/" , "pow" , "mod"]:
-            input_int1 = int(tokens[1])
-            input_int2 = int(tokens[2])
+            input_int1 = float(tokens[1])
+            input_int2 = float(tokens[2])
+            # if tokens[1] = False or tokens[2] = False:
+            #     print "Those are not valid numbers. Try again."
             if tokens[0] == "+":
                 answer = arithmetic2.add(input_int1 , input_int2)
                 print answer
@@ -34,27 +36,22 @@ def main():
             if tokens[0] == "/":
                 answer = arithmetic2.divide(input_int1 , input_int2)
                 print answer
-            if tokens[0] == "square":
-                answer = arithmetic2.square(input_int1)
-                print answer
-            if tokens[0] == "cube":
-                answer = arithmetic2.cube(input_int1)
-                print answer
             if tokens[0] == "pow":
                 answer = arithmetic2.power(input_int1 , input_int2)
                 print answer
             if tokens[0] == "mod":
                 answer = arithmetic2.mod(input_int1 , input_int2)
                 print answer
+        elif tokens[0] in ["square" , "cube"]:
+            input_int1 = float(tokens[1])
+            if tokens[0] == "square":
+                answer = arithmetic2.square(input_int1)
+                print answer
+            if tokens[0] == "cube":
+                answer = arithmetic2.cube(input_int1)
+                print answer
         else:
-            if tokens[0] in ["square" , "cube"]:
-                input_int1 = int(tokens[1])
-                if tokens[0] == "square":
-                    answer = arithmetic2.square(input_int1)
-                    print answer
-                if tokens[0] == "cube":
-                    answer = arithmetic2.cube(input_int1)
-
+            print "Invalid math operator or format. Try again"
 
 if __name__ == '__main__':
     main()
