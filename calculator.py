@@ -10,7 +10,7 @@ def main():
     # repeat forever:
     while True:
         #    read input
-        user_input = raw_input("Enter your operation > ")
+        user_input = raw_input("Enter your math problem starting with the operator and two numbers or type 'q' to quit the calculator >")
 
     #    tokenize input
         tokens = user_input.split(" ")
