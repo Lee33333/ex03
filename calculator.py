@@ -10,7 +10,7 @@ def main():
     # repeat forever:
     while True:
         #    read input
-        user_input = raw_input("Enter your math problem starting with the operator and two numbers or type 'q' to quit the calculator >")
+        user_input = raw_input("Enter your math problem starting with the operator and number(s) or type 'q' to quit the calculator >")
 
     #    tokenize input
         tokens = user_input.split(" ")
@@ -54,15 +54,6 @@ def main():
                     print answer
                 if tokens[0] == "cube":
                     answer = arithmetic2.cube(input_int1)
-                #print input_int1
-                #print input_int2 
-                #[0] == ("+" , "-" , "*" , "/" , "square" , "cube" , "pow" , "mod"):
-            #input_int1 = int(tokens[1])
-            #input_int2 = int(tokesn[2])
-            # answer = arithmetic2.add(int(tokens[1] , tokens[2])
-            # print answer
-            #print(input_int1 , input_int2)
-       
 
 
 if __name__ == '__main__':
