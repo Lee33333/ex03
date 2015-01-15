@@ -7,17 +7,19 @@ calculator program yourself in this file.
 import arithmetic2
 
 def main():
+    print"Enter your math problem starting with the operator and number(s) or type 'q' to quit the calculator"
     # repeat forever:
     while True:
         #    read input
-        user_input = raw_input("Enter your math problem starting with the operator and number(s) or type 'q' to quit the calculator >")
+        user_input = raw_input(">  ")
 
     #    tokenize input
-        tokens = user_input.split(" ")
+        tokens = user_input.split()
+        print(tokens)
         #print tokens
     #    if the first token is 'q', quit
         if tokens[0] == "q":
-            return
+            break
     #    otherwise decide which math function to call based on the tokens we read
         elif tokens[0] in ["+" , "-" , "*" , "/" , "pow" , "mod"]:
             input_int1 = float(tokens[1])
