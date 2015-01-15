@@ -23,9 +23,9 @@ def main():
             if tokens[0] in ["+" , "-" , "*" , "/" , "square" , "cube" , "pow" , "mod"]:
                 input_int1 = int(tokens[1])
                 input_int2 = int(tokens[2])
-                    if tokens[0] ==
-                #print input_int1
-                #print input_int2 
+                    #if tokens[0] ==
+                print input_int1
+                print input_int2 
                 #[0] == ("+" , "-" , "*" , "/" , "square" , "cube" , "pow" , "mod"):
             #input_int1 = int(tokens[1])
             #input_int2 = int(tokesn[2])
